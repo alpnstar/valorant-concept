@@ -3,6 +3,7 @@
 @import url('../styles/normalize.css');
 * {
     font-family: 'Montserrat';
+    flex-wrap: wrap;
 }
 body,html {
     width: 100%;
@@ -23,20 +24,21 @@ body {
 .header {
     font-size: 14px;
     color: white;
-    border-radius: 28px;
+    border-radius: 28px 28px 0 0;
     font-weight: 500;
     background-color: #1F2326;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     padding: 55px 73px;
     a {color: white;}
     &-logo {
         position: relative;
         &::after {
             content: url('../imgs/logo-after1.png');
-            position: relative;
-            left: 20px;
+            position: absolute;
+            left: 120%;
         }
         &::before {
             content: url('../imgs/logo-after2.png');
@@ -47,18 +49,25 @@ body {
     &__main {
         display: flex;
         align-items: center;
+        flex-wrap: nowrap;        
     }
     &__nav {
         margin-left:120px;
         ul {
-            display: grid;
-            grid-template-columns: repeat(9, auto);
-            grid-gap: 0 23px;
+            display: flex;
+            li {
+                margin-left: 20px;
+                line-height: 25px;
+                &:first-child {
+                    margin: 0;
+                }
+            }
         } 
     }
-    .nickname {
+    .user-info{
         display: flex;
         align-items: center;
+        flex-wrap: nowrap;
         &::after {
             content: url('../imgs/drop.png');
             position: relative;
@@ -68,6 +77,25 @@ body {
         img {
             border-radius: 50%;
             margin-right: 10px;
+        }
+    }
+}
+@media screen and (max-width: 1500px) {
+    .header {
+        &__nav {
+            ul {
+                li {
+                    margin: 0;
+                    flex-basis: 33%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1080px) {
+    .user-info {
+        .user-nickname {
+            display: none;
         }
     }
 }
