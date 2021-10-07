@@ -169,5 +169,27 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 1654px) {
+  .agents__item:nth-child(4) {
+    grid-column: 2;
+  }
+}
+@media screen and (max-width: 900px) {
+  .body-inner {
+    width: 100%;
+  }
+
+  .agents__element-wrapper {
+    position: static;
+    grid-gap: 20px;
+    padding: 0 20px;
+  }
+  .agents__item:last-child {
+    grid-column: auto;
+  }
+  .agents__item-head {
+    left: -35%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
