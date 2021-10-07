@@ -86,6 +86,78 @@ body {
   margin-right: 10px;
 }
 
+.agents {
+  background: url("../imgs/backgroundagents.png") #FC0032;
+  padding: 70px 0 0 0;
+}
+.agents .agents__head-wrapper {
+  margin: 0 0 30px 52px;
+  width: fit-content;
+}
+.agents .agents__head-wrapper h2 {
+  font-family: "Druk Wide";
+  color: #FC0032;
+  text-shadow: 0px 1px 0 black, 0px -1px 0 black, 1px 0px 0 black, -1px 0px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+  -webkit-text-shadow: 0px 1px 0 black, 0px -1px 0 black, 1px 0px 0 black, -1px 0px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+  -moz-text-shadow: 0px 1px 0 black, 0px -1px 0 black, 1px 0px 0 black, -1px 0px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+  font-weight: 500;
+  font-size: 100px;
+}
+.agents__element-wrapper {
+  position: relative;
+  left: 3.5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(307px, auto));
+  grid-gap: 65px;
+}
+.agents__item {
+  height: 806px;
+  background-color: #1E2326;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 0 0 0;
+}
+.agents__item-head {
+  position: relative;
+  left: -50%;
+  top: 30%;
+  color: white;
+  font-family: "Druk Wide";
+  transform: rotate(90deg);
+}
+.agents__item-head span {
+  color: red;
+}
+.agents__item-head h3 {
+  font-size: 52px;
+  font-weight: 500;
+}
+.agents__item:nth-child(1) {
+  background: url("../imgs/player1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.agents__item:nth-child(2) {
+  background: url("../imgs/player2.png") #1E2326;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.agents__item:nth-child(3) {
+  background: url("../imgs/player3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.agents__item:nth-child(4) {
+  background: url("../imgs/player4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px black solid;
+}
+
 @media screen and (max-width: 1500px) {
   .header__nav ul li {
     margin: 0;
