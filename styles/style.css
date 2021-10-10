@@ -32,6 +32,7 @@ body {
   background-color: #1F2326;
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center;
   flex-wrap: nowrap;
   padding: 55px 73px;
@@ -189,6 +190,11 @@ body {
   }
   .agents__item-head {
     left: -35%;
+  }
+}
+@media screen and (max-width: 766px) {
+  .header__nav ul li {
+    flex-basis: 50%;
   }
 }
 

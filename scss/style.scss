@@ -29,6 +29,7 @@ body {
     background-color: #1F2326;
     display: flex;
     justify-content: space-between;
+    position: relative;
     align-items: center;
     flex-wrap: nowrap;
     padding: 55px 73px;
@@ -200,4 +201,15 @@ body {
         
         }
     }
+}
+@media screen and (max-width: 766px) {
+    .header {
+        &__nav {
+            ul {
+                li {
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }   
 }
