@@ -21,6 +21,9 @@ body {
     box-shadow: 0 0 12px -1px black;
     border-radius: 28px;
 }
+.burger {
+    display: none;
+}
 .header {
     font-size: 14px;
     color: white;
@@ -185,6 +188,9 @@ body {
     .body-inner {
         width: 100%;
     }
+    .header {
+        padding: 53px 30px;
+    }
     .agents {
         &__element-wrapper {
             position: static;
@@ -209,6 +215,35 @@ body {
                 li {
                     flex-basis: 50%;
                 }
+            }
+        }
+    }   
+}
+@media screen and (max-width: 550px) {
+    .header {
+        &-logo {
+            display: block;
+            flex-grow: 2;
+        }
+        &__nav {
+            display: none;
+        }
+        .user-info {
+            justify-self: end;
+            &::after {
+                left: -50%;
+            }
+        }
+        .burger {
+            margin-left: 20px;
+            display: grid;
+            grid-gap: 5px 0;
+            span {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background: white;
+                
             }
         }
     }   

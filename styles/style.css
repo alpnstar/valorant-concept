@@ -24,6 +24,10 @@ body {
   border-radius: 28px;
 }
 
+.burger {
+  display: none;
+}
+
 .header {
   font-size: 14px;
   color: white;
@@ -180,6 +184,10 @@ body {
     width: 100%;
   }
 
+  .header {
+    padding: 53px 30px;
+  }
+
   .agents__element-wrapper {
     position: static;
     grid-gap: 20px;
@@ -195,6 +203,32 @@ body {
 @media screen and (max-width: 766px) {
   .header__nav ul li {
     flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header-logo {
+    display: block;
+    flex-grow: 2;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header .user-info {
+    justify-self: end;
+  }
+  .header .user-info::after {
+    left: -50%;
+  }
+  .header .burger {
+    margin-left: 20px;
+    display: grid;
+    grid-gap: 5px 0;
+  }
+  .header .burger span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: white;
   }
 }
 
