@@ -186,7 +186,7 @@ body {
   left: -5%;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(330px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
   grid-auto-rows: 150px;
   margin: 0 auto;
 }
@@ -203,6 +203,9 @@ body {
 }
 .features__item {
   background: white;
+  text-align: center;
+  border: 2px black solid;
+  border-radius: 20px 0 0 0;
 }
 .features__item:last-child {
   width: 50%;
@@ -217,6 +220,12 @@ body {
   .features__item:last-child {
     grid-column: auto;
   }
+}
+
+.footer {
+  height: 120px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
 }
 
 @media screen and (max-width: 1500px) {
