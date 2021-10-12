@@ -4,20 +4,18 @@
 * {
     font-family: 'Montserrat';
     flex-wrap: wrap;
-}
-body,html {
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Montserrat';
-    background: url('../imgs/body-background.png') no-repeat;
-    background-size: cover;
+    background: url('../imgs/body-background.png');
     background-color: #1F2326;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .body-inner {
     width: 86%;
-    margin: 153px auto;
+    margin: 153px auto 153px auto;
     box-shadow: 0 0 12px -1px black;
     border-radius: 28px;
 }
@@ -87,6 +85,7 @@ body {
 .agents {
     background: url('../imgs/backgroundagents.png') #FC0032;
     padding: 70px 0 0 0;
+    position: relative;
         .agents__head-wrapper {
             margin:0 0 30px 52px;
             width: fit-content;
@@ -174,6 +173,42 @@ body {
         }
     }
 }
+
+.features {
+    padding: 20px;
+    position: relative;
+    top: 70px;
+    left: -5%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(330px,auto));
+    grid-auto-rows: 150px;
+    margin: 0 auto;
+    @media screen and (max-width: 900px) {
+        position: static;
+    }
+    @media screen and (max-width: 690px) {
+        max-width: 630px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        background: white;
+        &:last-child {
+            width: 50%;
+            @media screen and (max-width: 1640px) {
+                justify-self: center;
+                grid-column: 2;
+            }
+            @media screen and (max-width: 690px) {
+                grid-column: auto;
+            }
+        }
+    }
+}
+.footer {
+}
+
 @media screen and (max-width: 1500px) {
     .header {
         &__nav {
