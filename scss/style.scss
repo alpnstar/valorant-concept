@@ -91,11 +91,8 @@ body {
             margin:0 0 30px 52px;
             width: fit-content;
             h2 {
-                font-family: 'Druk Wide';
-                color: #FC0032;
-                text-shadow:0px 1px 0 rgb(0,0,0),0px -1px 0 rgb(0,0,0),1px 0px 0 rgb(0,0,0),-1px 0px 0 rgb(0,0,0),1px 1px 0 rgb(0,0,0),1px -1px 0 rgb(0,0,0),-1px 1px 0 rgb(0,0,0),-1px -1px 0 rgb(0,0,0);
-                -webkit-text-shadow:0px 1px 0 rgb(0,0,0),0px -1px 0 rgb(0,0,0),1px 0px 0 rgb(0,0,0),-1px 0px 0 rgb(0,0,0),1px 1px 0 rgb(0,0,0),1px -1px 0 rgb(0,0,0),-1px 1px 0 rgb(0,0,0),-1px -1px 0 rgb(0,0,0);
-                -moz-text-shadow:0px 1px 0 rgb(0,0,0),0px -1px 0 rgb(0,0,0),1px 0px 0 rgb(0,0,0),-1px 0px 0 rgb(0,0,0),1px 1px 0 rgb(0,0,0),1px -1px 0 rgb(0,0,0),-1px 1px 0 rgb(0,0,0),-1px -1px 0 rgb(0,0,0);  
+                font-family: Montserrat;
+                color: white;
                 font-weight: 500;
                 font-size: 100px;
             }
@@ -109,6 +106,7 @@ body {
 
     }
     &__item {
+        width: 100%;
         &-head {
             position: relative;
             left: -50%;
@@ -122,6 +120,26 @@ body {
             h3 {
                 font-size: 52px;
                 font-weight: 500;
+            }
+        }
+        .abillities {
+            position: relative;
+            left: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1F2326;
+            border: 2px #F8F8F8 solid;
+            box-sizing: border-box;
+            padding: 10px 25px;
+            top: 85%;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+            &--whiteback {
+                background-color: white;
+                border: 2px solid #1F2326;
             }
         }
         height: 806px;
@@ -187,11 +205,24 @@ body {
 @media screen and (max-width: 900px) {
     .body-inner {
         width: 100%;
+        height: 100%;
+        margin: 0;
     }
     .header {
         padding: 53px 30px;
+        border-radius: 0;
     }
     .agents {
+        &__head  {
+            font-size: 50px !important;
+        }
+        .abillities {
+            left: 0;
+            top: 78%;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+            
+        }
         &__element-wrapper {
             position: static;
             grid-gap: 20px;
@@ -200,6 +231,8 @@ body {
         &__item {
             &:last-child {
                 grid-column: auto;
+            }
+            &__head-wrapper {
             }
             &-head {
                 left: -35%;
@@ -216,6 +249,16 @@ body {
                     flex-basis: 50%;
                 }
             }
+        }
+    }
+    .agents {
+        &__element-wrapper {
+            
+        }
+        &__item {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
         }
     }   
 }
@@ -247,4 +290,38 @@ body {
             }
         }
     }   
+}
+@media screen and(max-width:425px) {
+    
+    .agents {
+        &__head-wrapper {
+            margin: 0 auto 50px auto !important;
+        }
+        .abillities {
+            left: 10%;
+            top: 81%;
+        }
+    }
+}
+@media screen and (max-width: 388px) {
+    .agents {
+        &__element-wrapper {
+            padding: 0;
+        }
+        &__head-wrapper {
+        }
+        &__head {
+            font-size: 50px !important;
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .abillities {
+        left: 0 !important;
+    }
+    .header-logo {
+        &::after,&::before {
+            display: none;
+        }
+    }
 }

@@ -100,11 +100,8 @@ body {
   width: fit-content;
 }
 .agents .agents__head-wrapper h2 {
-  font-family: "Druk Wide";
-  color: #FC0032;
-  text-shadow: 0px 1px 0 black, 0px -1px 0 black, 1px 0px 0 black, -1px 0px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
-  -webkit-text-shadow: 0px 1px 0 black, 0px -1px 0 black, 1px 0px 0 black, -1px 0px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
-  -moz-text-shadow: 0px 1px 0 black, 0px -1px 0 black, 1px 0px 0 black, -1px 0px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+  font-family: Montserrat;
+  color: white;
   font-weight: 500;
   font-size: 100px;
 }
@@ -116,6 +113,7 @@ body {
   grid-gap: 65px;
 }
 .agents__item {
+  width: 100%;
   height: 806px;
   background-color: #1E2326;
   background-position: center;
@@ -136,6 +134,26 @@ body {
 .agents__item-head h3 {
   font-size: 52px;
   font-weight: 500;
+}
+.agents__item .abillities {
+  position: relative;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1F2326;
+  border: 2px #F8F8F8 solid;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  top: 85%;
+}
+.agents__item .abillities img {
+  width: 50px;
+  height: 50px;
+}
+.agents__item .abillities--whiteback {
+  background-color: white;
+  border: 2px solid #1F2326;
 }
 .agents__item:nth-child(1) {
   background: url("../imgs/player1.png");
@@ -182,12 +200,24 @@ body {
 @media screen and (max-width: 900px) {
   .body-inner {
     width: 100%;
+    height: 100%;
+    margin: 0;
   }
 
   .header {
     padding: 53px 30px;
+    border-radius: 0;
   }
 
+  .agents__head {
+    font-size: 50px !important;
+  }
+  .agents .abillities {
+    left: 0;
+    top: 78%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+  }
   .agents__element-wrapper {
     position: static;
     grid-gap: 20px;
@@ -203,6 +233,12 @@ body {
 @media screen and (max-width: 766px) {
   .header__nav ul li {
     flex-basis: 50%;
+  }
+
+  .agents__item {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -229,6 +265,32 @@ body {
     width: 30px;
     height: 2px;
     background: white;
+  }
+}
+@media screen and (max-width: 425px) {
+  .agents__head-wrapper {
+    margin: 0 auto 50px auto !important;
+  }
+  .agents .abillities {
+    left: 10%;
+    top: 81%;
+  }
+}
+@media screen and (max-width: 388px) {
+  .agents__element-wrapper {
+    padding: 0;
+  }
+  .agents__head {
+    font-size: 50px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .abillities {
+    left: 0 !important;
+  }
+
+  .header-logo::after, .header-logo::before {
+    display: none;
   }
 }
 
