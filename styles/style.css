@@ -276,6 +276,10 @@ body {
   .agents__item-head {
     left: -35%;
   }
+
+  .footer {
+    border-radius: 0;
+  }
 }
 @media screen and (max-width: 766px) {
   .header__nav ul li {
